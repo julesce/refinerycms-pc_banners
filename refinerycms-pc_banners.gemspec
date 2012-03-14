@@ -9,7 +9,9 @@ Gem::Specification.new do |s|
   s.summary           = 'Banners extension for Refinery CMS'
   s.require_paths     = %w(lib)
   s.files             = Dir["{app,config,db,lib}/**/*"] + ["readme.md"]
-  s.authors           = 'Perfect Circle'
+  s.author            = 'James Thompson'
+  s.email             = 'james.b.thompson@gmail.com'
+  s.homepage          = 'https://github.com/julesce/refinerycms-pods'
 
   # Runtime dependencies
   s.add_dependency             'refinerycms-core',    '~> 2.0.1'
