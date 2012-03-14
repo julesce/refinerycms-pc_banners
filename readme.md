@@ -12,7 +12,7 @@ Refinery CMS version 2.0.0 and above.
 
 Open up your ``Gemfile`` and add the following:
 
-    gem 'refinerycms-pc_banners', '2.0', :git => 'git://github.com/julesce/refinerycms-pc_banners.git'
+    gem 'refinerycms-pc_banners', '2.0.0', :git => 'git://github.com/julesce/refinerycms-pc_banners.git'
 
 Now, run:
 
