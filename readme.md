@@ -12,7 +12,7 @@ Refinery CMS version 2.0.0 and above.
 
 Open up your ``Gemfile`` and add the following:
 
-    gem 'refinerycms-pc_banners', '2.0.0', :git => 'git://github.com/julesce/refinerycms-pc_banners.git'
+    gem 'refinerycms-pc_banners', '2.0.1'
 
 Now, run:
 
@@ -48,4 +48,4 @@ Let's say you are using the [Nivo Slider](http://nivo.dev7studios.com/) for your
 
  Or you can use the following to accomplish something very similar to the above:
 
-     <%= render :partial => 'refinery/banners/shared/banners' %>
+    <%= render :partial => 'refinery/banners/shared/banners' %>

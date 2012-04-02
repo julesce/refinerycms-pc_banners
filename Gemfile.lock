@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    refinerycms-pc_banners (2.0.0)
+    refinerycms-pc_banners (2.0.1)
       refinerycms-core (~> 2.0.1)
 
 GEM

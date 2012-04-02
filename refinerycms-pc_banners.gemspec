@@ -3,9 +3,9 @@
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.name              = 'refinerycms-pc_banners'
-  s.version           = '2.0.0'
+  s.version           = '2.0.1'
   s.description       = 'Ruby on Rails Banners extension for Refinery CMS'
-  s.date              = '2012-03-11'
+  s.date              = '2012-04-02'
   s.summary           = 'Banners extension for Refinery CMS'
   s.require_paths     = %w(lib)
   s.files             = Dir["{app,config,db,lib}/**/*"] + ["readme.md"]
