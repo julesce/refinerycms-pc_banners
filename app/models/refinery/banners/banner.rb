@@ -5,6 +5,8 @@ module Refinery
 
       acts_as_indexed :fields => [:name, :url, :title, :description]
 
+      attr_accessible :name, :title, :description, :image_id, :url, :is_active, :start_date, :expiry_date, :position, :page_ids
+
       validates :name, :presence => true
       validates_presence_of :start_date
       validates_length_of :title, :in => 0..255, :allow_nil => true
@@ -25,3 +27,13 @@ module Refinery
     end
   end
 end
+
+#t.string :name
+#t.string :title
+#t.string :description
+#t.integer :image_id
+#t.string :url
+#t.boolean :is_active
+#t.date :start_date
+#t.date :expiry_date
+#t.integer :position

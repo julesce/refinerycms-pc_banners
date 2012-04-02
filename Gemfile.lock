@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    refinerycms-banners (1.0)
+    refinerycms-pc_banners (2.0.0)
       refinerycms-core (~> 2.0.1)
 
 GEM
@@ -276,7 +276,7 @@ DEPENDENCIES
   rb-fchange (~> 0.0.5)
   rb-notifu (~> 0.0.4)
   refinerycms (~> 2.0.0)
-  refinerycms-banners!
+  refinerycms-pc_banners!
   refinerycms-testing (~> 2.0.0)
   sass-rails
   spork (= 0.9.0.rc9)
