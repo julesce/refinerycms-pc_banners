@@ -1,0 +1,35 @@
+sk:
+  refinery:
+    plugins:
+      banners:
+        title: Banery
+    banners:
+      admin:
+        banners:
+          actions:
+            create_new: Pridať novú stránku
+            reorder: Zmeniť usporiadanie banerov
+            reorder_done: Uložiť usporiadanie
+          records:
+            title: Banery
+            sorry_no_results: Žiadne záznamy sa nenašli
+            no_items_yet: Zatiaľ neboli pridané žiadne záznamy. Klikni "Pridať nový banner" pre pridanie prvého.
+          banner:
+            view_live_html: Zobraziť baner<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť tento album
+            delete: Zmazať tento baner
+      banners:
+        show:
+          other: Ďalšie banery
+  activerecord:
+    attributes:
+      'refinery/banners/banner':
+        name: Názov
+        title: Nadpis
+        description: Popis
+        image: Obrázok
+        url: Url
+        is_active: Je aktívny
+        start_date: Dátum publikovania
+        expiry_date: Dátum expirácie
+        position: Pozícia
