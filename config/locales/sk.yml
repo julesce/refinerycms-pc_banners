@@ -5,6 +5,7 @@ sk:
         title: Banery
     banners:
       admin:
+        banner: baner
         banners:
           actions:
             create_new: Pridať novú stránku
