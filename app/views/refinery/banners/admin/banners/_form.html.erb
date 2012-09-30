@@ -1,7 +1,3 @@
-<%- content_for(:javascripts) do -%>
-    <%= javascript_include_tag "banners/jquery.tristate.js", "banners/banners.js" -%>
-<%- end -%>
-
 <%= form_for [refinery, :banners_admin, @banner] do |f| -%>
     <%= render '/refinery/admin/error_messages',
                :object => @banner,
