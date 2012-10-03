@@ -8,7 +8,7 @@ sk:
         banner: baner
         banners:
           actions:
-            create_new: Pridať novú stránku
+            create_new: Pridať nový baner
             reorder: Zmeniť usporiadanie banerov
             reorder_done: Uložiť usporiadanie
           records:

@@ -1,76 +1,77 @@
 <%= form_for [refinery, :banners_admin, @banner] do |f| -%>
-  <%= render '/refinery/admin/error_messages',
-              :object => @banner,
-              :include_object_name => true %>
+    <%= render '/refinery/admin/error_messages',
+               :object => @banner,
+               :include_object_name => true %>
 
-  <%= hidden_field_tag 'banner[page_ids][]' %>
+    <%= hidden_field_tag 'banner[page_ids][]' %>
 
-  <div class='field'>
-    <%= f.label :name -%>
-    <%= f.text_field :name, :class => 'larger widest'  -%>
+    <div class='field'>
+      <%= f.label :name -%>
+      <%= f.text_field :name, :class => 'larger widest'  -%>
 
-  </div>
-  
-  <div class='field'>
-    <%= f.label :title -%>
-    <%= f.text_field :title  -%>
+    </div>
 
-  </div>
-  
-  <div class='field'>
-    <%= f.label :description -%>
-    <%= f.text_field :description  -%>
+    <div class='field'>
+      <%= f.label :title -%>
+      <%= f.text_field :title  -%>
 
-  </div>
-  
-  <div class='field'>
-    <%= f.label :image -%>
-    <%= render '/refinery/admin/image_picker',
-               :f => f,
-               :field => :image_id,
-               :image => @banner.image,
-               :toggle_image_display => false,
-               :description => t('refinery.banners.admin.banner')
-    %>
+    </div>
 
-  </div>
-  
-  <div class='field'>
-    <%= f.label :url -%>
-    <%= f.text_field :url  -%>
+    <div class='field'>
+      <%= f.label :description -%>
+      <%= f.text_field :description  -%>
 
-  </div>
-  
-  <div class='field'>
-    <%= f.label :is_active -%>
-    <%= f.check_box :is_active, :checked => @banner[:is_active]  -%>
+    </div>
 
-  </div>
-  
-  <div class='field'>
-    <%= f.label :start_date -%>
-    <%= f.date_select :start_date  -%>
+    <div class='field'>
+      <%= f.label :image -%>
+      <%= render '/refinery/admin/image_picker',
+                 :f => f,
+                 :field => :image_id,
+                 :image => @banner.image,
+                 :toggle_image_display => false,
+                 :description => t('refinery.banners.admin.banner')
+      %>
 
-  </div>
-  
-  <div class='field'>
-    <%= f.label :expiry_date -%>
-    <%= f.date_select :expiry_date  -%>
+    </div>
 
-  </div>
+    <div class='field'>
+      <%= f.label :url -%>
+      <%= f.text_field :url  -%>
 
-  <div class="field">
-    <%= f.label :pages %>
-    <% Refinery::Page.all.each do |page| %>
-      <div>
-        <%= check_box_tag "banner[page_ids][]", page.id, @banner.pages.include?(page) %>
-        <%= page.title %>
-      </div>
-    <% end %>
-  </div>
+    </div>
 
-  <%= render '/refinery/admin/form_actions', :f => f,
-             :continue_editing => false,
-             :delete_title => t('delete', :scope => 'refinery.banners.admin.banners.banner'),
-             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @banner.name) %>
+    <div class='field'>
+      <%= f.label :is_active -%>
+      <%= f.check_box :is_active, :checked => @banner[:is_active]  -%>
+
+    </div>
+
+    <div class='field'>
+      <%= f.label :start_date -%>
+      <%= f.date_select :start_date  -%>
+
+    </div>
+
+    <div class='field'>
+      <%= f.label :expiry_date -%>
+      <%= f.date_select :expiry_date  -%>
+
+    </div>
+
+    <section id="records" class="tree">
+      <%= f.label :pages %>
+      <ul class="tristate">
+        <%= render :partial => 'refinery/banners/admin/banners/page', :collection => Refinery::Page.order("lft ASC").select{|p| p.parent_id.nil?}  %>
+      </ul>
+    </section>
+
+
+    <div style="clear: both;"></div>
+    <%= render '/refinery/admin/form_actions', :f => f,
+               :continue_editing => false,
+               :delete_title => t('delete', :scope => 'refinery.banners.admin.banners.banner'),
+               :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @banner.name) %>
 <% end -%>
+
+
