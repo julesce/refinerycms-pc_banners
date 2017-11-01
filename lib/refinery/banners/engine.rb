@@ -11,11 +11,6 @@ module Refinery
           plugin.name = "banners"
           plugin.url = proc { Refinery::Core::Engine.routes.url_helpers.banners_admin_banners_path }
           plugin.pathname = root
-          plugin.activity = {
-            :class_name => :'refinery/banners/banner',
-            :title => 'name'
-          }
-          
         end
       end
 
